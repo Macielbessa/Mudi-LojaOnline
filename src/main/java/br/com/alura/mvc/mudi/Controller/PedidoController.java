@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/pedido")
+@RequestMapping("pedido")
 public class PedidoController {
     @Autowired
     private PedidoRepository pedidoRepository;
 
-    @GetMapping("/formulario")
+    @GetMapping("formulario")
     public String formulario(RequisicaoNovoPedido requisicao){
         return "pedido/formulario";
     }
 
-    @PostMapping("/novo")
+    @PostMapping("novo")
     public String novo(@Valid RequisicaoNovoPedido requisicao, BindingResult result){
         if (result.hasErrors()){
             return "pedido/formulario";
@@ -31,6 +31,6 @@ public class PedidoController {
 
         Pedido pedido = requisicao.toPedido();
         pedidoRepository.save(pedido);
-        return "pedido/formulario";
+        return "redirect:/home";
     }
 }
