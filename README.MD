@@ -1,4 +1,13 @@
 O Projeto foi feito no intuito de aprender Spring MVC, Thymeleaf e banco de dados
+Conhecendo o padrão MVC com o Spring MVC
+
+Use o Spring Data para persistência
+
+Crie views melhores com Thymeleaf
+
+Validando os seus dados com o BeanValidation
+
+Estilize o HTML com Bootstrap
 
 PROJETO DE UMA LOJA SIMPLES
 =
