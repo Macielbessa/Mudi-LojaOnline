@@ -1,0 +1,16 @@
+Fazendo parte do spring security, usado na nossa aplicação para a implementação da autenticação do usuário usando Spring Security
+
+https://spring.io/guides/gs/securing-web/ = documentação
+https://www.javatips.net/api/jwt-spring-security-demo-master/src/main/java/org/zerhusen/config/WebSecurityConfig.java
+https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.html
+WebSecurityConfigurerAdapter é uma api no qual a gente extende a nossa classe
+
+uma classe que vai nos ajudar a integrar nossa aplicação com Spring Security e ele também nos oferece uma anotação aqui para fazermos
+inicialização junto da camada de segurança da nossa aplicação.
+
+@Configuration é do próprio Spring, atualizando para o Spring que essa é a classe de configuração
+e Eu vou reimplementar o método configure() que recebe HttpSecurity.
+
+@Configuration e @EnableWebSecurity na classe que define as regras de segurança
+As regras de acesso foram definidos pelo HttpSecurity
+Os dados do usuário, como login e senha, foram definidos pelo método userDetailsService()
